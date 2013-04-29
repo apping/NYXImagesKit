@@ -79,7 +79,7 @@
 
 -(UIImage*)scaleByFactor:(float)scaleFactor
 {
-	CGSize scaledSize = CGSizeMake(self.size.width * scaleFactor, self.size.height * scaleFactor);
+	CGSize scaledSize = CGSizeMake(ceilf(self.size.width * scaleFactor), ceilf(self.size.height * scaleFactor));
 	return [self scaleToFillSize:scaledSize];
 }
 
